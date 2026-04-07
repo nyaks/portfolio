@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brian Nyakeri — Data, AI & Cloud Engineering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --black: rgba(0,0,0,0.95);
+      --white: #ffffff;
+      --warm-white: #f6f5f4;
+      --warm-gray: #615d59;
+      --warm-gray-light: #a39e98;
+      --blue: #0075de;
+      --blue-hover: #005bab;
+      --border: 1px solid rgba(0,0,0,0.1);
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page { max-width: 640px; margin: 0 auto; padding: 80px 24px; }
+
+    /* Header */
+    .header { margin-bottom: 48px; }
+    .header .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 8px;
+    }
+    .header .bio {
+      font-size: 1rem;
+      color: var(--warm-gray);
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 1.125rem;
+      color: var(--warm-gray);
+      line-height: 1.5;
+    }
+
+    /* Tags */
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.125px;
+    }
+    .tag-ai { background: #fef3e2; color: #92400e; }
+    .tag-data { background: #e0f2fe; color: #075985; }
+    .tag-ml { background: #f3e8ff; color: #6b21a8; }
+    .tag-api { background: #ecfdf5; color: #065f46; }
+
+    /* Project links */
+    .project-list { list-style: none; }
+    .project-list li {
+      padding: 20px 0;
+      border-bottom: var(--border);
+    }
+    .project-list li:first-child { padding-top: 0; }
+    .project-list li:last-child { border-bottom: none; }
+    .project-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 4px;
+      transition: color 0.15s;
+    }
+    .project-link:hover { color: var(--blue); text-decoration: none; }
+    .project-link .arrow { font-size: 0.875rem; transition: transform 0.15s; }
+    .project-link:hover .arrow { transform: translateX(3px); }
+    .project-desc { font-size: 0.94rem; color: var(--warm-gray); line-height: 1.45; }
+    .project-meta { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: var(--border);
+      margin: 48px 0;
+    }
+
+    /* Contact */
+    .contact h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.375px;
+      margin-bottom: 12px;
+    }
+    .contact-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .contact-links a {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: var(--border);
+      font-size: 0.8125rem;
+      color: var(--warm-gray-light);
+    }
+
+    @media (max-width: 480px) {
+      .header h1 { font-size: 2rem; letter-spacing: -1px; }
+      .page { padding: 48px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <div class="header">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/12729828?v=4" alt="Brian Nyakeri avatar">
+      <h1>Brian Nyakeri</h1>
+      <p class="bio">Exploring the world of data.</p>
+      <p>Building production-grade data pipelines, machine learning systems, and cloud-native applications. 10+ years of turning messy data into reliable systems.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Projects -->
+    <ul class="project-list">
+      <li>
+        <a href="https://github.com/nyaks/realtime-sensor-dashboard" class="project-link" target="_blank">
+          IoT Sensor Monitor with ML Anomaly Detection
+          <span class="arrow">&rarr;</span>
+        </a>
+        <p class="project-desc">Real-time streaming dashboard with Isolation Forest anomaly detection, live gauges, alert system, and anomaly heatmaps.</p>
+        <div class="project-meta">
+          <span class="tag tag-ml">ML / scikit-learn</span>
+          <span class="tag tag-data">Streamlit</span>
+          <span class="tag tag-data">SQLite</span>
+        </div>
+      </li>
+      <li>
+        <a href="https://github.com/nyaks/sentiment-analysis-dashboard" class="project-link" target="_blank">
+          Sentiment Analysis Dashboard
+          <span class="arrow">&rarr;</span>
+        </a>
+        <p class="project-desc">Transformer-based NLP pipeline with HuggingFace models. Analyze text, upload CSVs, explore trends with word clouds and time-series charts.</p>
+        <div class="project-meta">
+          <span class="tag tag-ai">AI / NLP</span>
+          <span class="tag tag-ai">Transformers</span>
+          <span class="tag tag-data">Plotly</span>
+        </div>
+      </li>
+      <li>
+        <a href="https://github.com/nyaks/sales-analytics-pipeline" class="project-link" target="_blank">
+          Sales Analytics Pipeline
+          <span class="arrow">&rarr;</span>
+        </a>
+        <p class="project-desc">End-to-end ETL pipeline with customer cohort analysis, lifetime value calculations, regional breakdowns, and revenue forecasting.</p>
+        <div class="project-meta">
+          <span class="tag tag-data">ETL Pipeline</span>
+          <span class="tag tag-data">Pandas</span>
+          <span class="tag tag-data">Forecasting</span>
+        </div>
+      </li>
+      <li>
+        <a href="https://github.com/nyaks/image-classification-api" class="project-link" target="_blank">
+          Image Classification REST API
+          <span class="arrow">&rarr;</span>
+        </a>
+        <p class="project-desc">ResNet-18 fine-tuned on CIFAR-10, served via FastAPI with authentication, rate limiting, and a modern upload interface.</p>
+        <div class="project-meta">
+          <span class="tag tag-ml">Deep Learning</span>
+          <span class="tag tag-api">FastAPI</span>
+          <span class="tag tag-api">PyTorch</span>
+        </div>
+      </li>
+    </ul>
+
+    <hr class="divider">
+
+    <!-- Contact -->
+    <div class="contact">
+      <h2>Get in touch</h2>
+      <div class="contact-links">
+        <a href="https://github.com/nyaks" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+        <a href="mailto:you@example.com">Email</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Brian Nyakeri &middot; Built with care.
+    </div>
+
+  </div>
+</body>
+</html>
